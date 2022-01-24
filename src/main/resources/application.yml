@@ -3,6 +3,8 @@ spring:
     config:
       import-check:
         enable: false
+  service:
+    base-url: https://jsonplaceholder.typicode.com
 
 server:
   port: 8090
