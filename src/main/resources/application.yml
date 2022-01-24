@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    config:
+      import-check:
+        enable: false
+
+server:
+  port: 8090
+  servlet:
+    context-path: user-mng-srv
+
