@@ -2,12 +2,12 @@ spring:
   cloud:
     config:
       import-check:
-        enable: false
+        enabled: false
   service:
     base-url: https://jsonplaceholder.typicode.com
 
 server:
   port: 8090
   servlet:
-    context-path: user-mng-srv
+    context-path: /user-mng-srv
 
