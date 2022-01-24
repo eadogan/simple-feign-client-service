@@ -1,4 +1,4 @@
-package com.feignclient.feignclientproject;
+package co.uk.atlantis.feignclientproject;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
