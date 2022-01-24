@@ -3,6 +3,7 @@ package co.uk.atlantis.feignclientproject.controller;
 import co.uk.atlantis.feignclientproject.client.BasicFeignClient;
 import co.uk.atlantis.feignclientproject.model.User;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,5 +22,10 @@ public class UserController {
     @GetMapping("/users")
     public List<User> getAllUsers() {
         return feignClient.getAllUsers();
+    }
+
+    @GetMapping("/users/{id}")
+    public User getById(@PathVariable int id) {
+        return feignClient.getById(id);
     }
 }
