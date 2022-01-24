@@ -4,7 +4,7 @@
 
 ## Profiles
 * localhost:8090
-* with context-path ->> /user-mng-srv
+* with context-path > /user-mng-srv
 
 ## Build
 ```
