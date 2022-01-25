@@ -2,10 +2,7 @@ package co.uk.atlantis.feignclientproject.controller;
 
 import co.uk.atlantis.feignclientproject.client.BasicFeignClient;
 import co.uk.atlantis.feignclientproject.model.User;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,5 +24,15 @@ public class UserController {
     @GetMapping("/users/{id}")
     public User getById(@PathVariable int id) {
         return feignClient.getById(id);
+    }
+
+    @PostMapping("/users")
+    public User createUser(@RequestBody User user) {
+        return feignClient.createUser(user);
+    }
+
+    @DeleteMapping("/users/{id}")
+    public User deleteUser(@PathVariable int id) {
+        return feignClient.deleteByUserId(id);
     }
 }
